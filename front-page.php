@@ -7,11 +7,11 @@
       <ul class="menu-vertical">
         <li class="current-menu-item"><a href="#"><i class="fas fa-home"></i> <?php _e('Início', 'intranet'); ?></a></li>
         <li><a href="<?php echo site_url('/wp-login.php'); ?>"><i class="fas fa-user"></i> <?php _e('Meu Perfil', 'intranet'); ?></a></li>
-        <li><a href="#"><i class="fas fa-calendar-alt"></i> <?php _e('Calendário', 'intranet'); ?></a></li>
-        <li><a href="#"><i class="fas fa-file-alt"></i> <?php _e('Documentos', 'intranet'); ?></a></li>
-        <li><a href="#"><i class="fas fa-chart-line"></i> <?php _e('Relatórios', 'intranet'); ?></a></li>
-        <li><a href="#"><i class="fas fa-users"></i> <?php _e('Equipe', 'intranet'); ?></a></li>
-        <li><a href="#"><i class="fas fa-cog"></i> <?php _e('Configurações', 'intranet'); ?></a></li>
+        <li><a href="<?php echo site_url('/calendario'); ?>"><i class="fas fa-calendar-alt"></i> <?php _e('Calendário', 'intranet'); ?></a></li>
+        <li><a href="<?php echo site_url('/documentos'); ?>"><i class="fas fa-file-alt"></i> <?php _e('Documentos', 'intranet'); ?></a></li>
+        <li><a href="<?php echo site_url('/relatorios'); ?>"><i class="fas fa-chart-line"></i> <?php _e('Relatórios', 'intranet'); ?></a></li>
+        <li><a href="<?php echo site_url('/equipe'); ?>"><i class="fas fa-users"></i> <?php _e('Equipe', 'intranet'); ?></a></li>
+        <li><a href="<?php echo site_url('/configuracoes'); ?>"><i class="fas fa-cog"></i> <?php _e('Configurações', 'intranet'); ?></a></li>
       </ul>
     </nav>
   </aside>
@@ -21,12 +21,13 @@
     <section class="hero-moderno">
       <div class="container">
         <div class="hero-content">
-          <h2><?php _e('Participe do nosso WhatsApp!', 'intranet'); ?></h2>
-          <p><?php _e('Fique por dentro de documentos, notícias e serviços internos da Prefeitura de Três Corações - MG.', 'intranet'); ?></p>
-          <a href="#" class="btn-primario">
-            <i class="fab fa-whatsapp"></i> <?php _e('Entre agora', 'intranet'); ?>
-          </a>
-        </div>
+    <h2><?php _e('Participe do nosso WhatsApp!', 'intranet'); ?></h2>
+    <p><?php _e('Fique por dentro de documentos, notícias e serviços internos da Prefeitura de Três Corações - MG.', 'intranet'); ?></p>
+    <a href="https://wa.me/35988613855" class="btn-primario" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> <?php _e('Entre agora', 'intranet'); ?>
+    </a>
+</div>
+
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imagem-lateral.png" alt="" class="hero-pattern">
       </div>
     </section>
@@ -34,43 +35,53 @@
     <div class="container">
       <!-- Atalhos Rápidos -->
       <section class="atalhos-modernos">
-        <div class="atalhos-grid">
-          <div class="atalho-card">
+    <div class="atalhos-grid">
+
+        <a href="/helpdesk" class="atalho-card">
             <i class="fas fa-headset"></i>
             <span><?php _e('Helpdesk', 'intranet'); ?></span>
-          </div>
-          <div class="atalho-card">
+        </a>
+
+        <a href="/artes" class="atalho-card">
             <i class="fa-solid fa-palette"></i>
             <span><?php _e('Artes', 'intranet'); ?></span>
-          </div>
-          <div class="atalho-card">
-            <i class="fas fa-users"></i>
-            <span><?php _e('Diretório', 'intranet'); ?></span>
-          </div>
-          <div class="atalho-card">
+        </a>
+
+        <a href="https://webmail.trescoracoes.mg.gov.br" class="atalho-card" target="_blank" rel="noopener noreferrer">
+    <i class="fas fa-envelope"></i>
+    <span><?php _e('WebMail', 'intranet'); ?></span>
+</a>
+
+
+        <a href="/noticias" class="atalho-card">
             <i class="fas fa-newspaper"></i>
             <span><?php _e('Notícias', 'intranet'); ?></span>
-          </div>
-          <div class="atalho-card">
+        </a>
+
+        <a href="https://servicos.cloud.el.com.br/mg-trescoracoes-pm/portal/" class="atalho-card" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-money-check-dollar"></i>
             <span><?php _e('Folha de Pagamento', 'intranet'); ?></span>
-          </div>
-          <div class="atalho-card">
+        </a>
+
+        <a href="/calendario" class="atalho-card">
             <i class="fas fa-calendar-alt"></i>
             <span><?php _e('Eventos', 'intranet'); ?></span>
-          </div>
-		  <div class="atalho-card">
-		    <i class="fas fa-file-alt"></i>
+        </a>
+
+        <a href="/relatorios" class="atalho-card">
+            <i class="fas fa-file-alt"></i>
             <span><?php _e('Relatórios', 'intranet'); ?></span>
-          </div>
-        </div>
-      </section>
+        </a>
+
+    </div>
+</section>
+
 
       <!-- Notícias -->
       <section class="noticias-modernas">
         <div class="section-header">
           <h3><?php _e('Últimas Notícias', 'intranet'); ?></h3>
-          <a href="<?php echo get_permalink(get_page_by_path('todas-as-noticias')); ?>" class="ver-tudo">
+          <a href="<?php echo get_permalink(get_page_by_path('noticias')); ?>" class="ver-tudo">
   <?php _e('Ver tudo', 'intranet'); ?> <i class="fas fa-arrow-right"></i>
 </a>
         </div>
@@ -135,21 +146,21 @@
         <div class="stats-grid">
           <div class="stats-card">
             <i class="fas fa-users"></i>
-            <h4><?php _e('Colaboradores Ativos', 'intranet'); ?></h4>
-            <div class="stats-value">1.245</div>
-            <div class="stats-period"><?php _e('Atualizado hoje', 'intranet'); ?></div>
+            <h4><?php _e('Banco de Alimentos', 'intranet'); ?></h4>
+            <div class="stats-value">22 toneladas</div>
+            <div class="stats-period"><?php _e('em julho', 'intranet'); ?></div>
           </div>
           <div class="stats-card">
             <i class="fas fa-briefcase"></i>
-            <h4><?php _e('Projetos em Andamento', 'intranet'); ?></h4>
-            <div class="stats-value">38</div>
-            <div class="stats-period"><?php _e('Este mês', 'intranet'); ?></div>
+            <h4><?php _e('CER IV entrega', 'intranet'); ?></h4>
+            <div class="stats-value">30</div>
+            <div class="stats-period"><?php _e('órteses e próteses', 'intranet'); ?></div>
           </div>
           <div class="stats-card">
             <i class="fas fa-envelope-open-text"></i>
             <h4><?php _e('Chamados Abertos', 'intranet'); ?></h4>
-            <div class="stats-value">12</div>
-            <div class="stats-period"><?php _e('Últimas 24h', 'intranet'); ?></div>
+            <div class="stats-value">487</div>
+            <div class="stats-period"><?php _e('pela T.I nesse mês', 'intranet'); ?></div>
           </div>
           <div class="stats-card">
             <i class="fas fa-calendar-check"></i>
@@ -167,30 +178,48 @@
       </section>
     
       <!-- Redes Sociais -->
-      <section class="redes-sociais">
-        <div class="section-header">
-          <h3><?php _e('Redes Sociais', 'intranet'); ?></h3>
-        </div>
-        <div class="instagram-feed">
-          <!-- Substitua o src abaixo pelo seu widget do Instagram ou plugin de sua preferência -->
-          <iframe src="https://495d585d8718431585cad1ab322b97ef.elf.site" 
-                  class="snapwidget-widget" 
-                  allowtransparency="true" 
-                  frameborder="0" 
-                  scrolling="no" 
-                  style="border:none; overflow:hidden; width:100%; height:900px"></iframe>
-        </div>
-        <style>
-          .instagram-feed {
+<section class="redes-sociais">
+    <div class="section-header">
+        <h3><?php _e('Redes Sociais', 'intranet'); ?></h3>
+    </div>
+    <div class="instagram-feed">
+        <?php echo do_shortcode('[instagram_posts_manual]'); ?>
+    </div>
+    <style>
+        .instagram-feed {
             max-width: 100%;
             margin: 0 auto;
-          }
-          .instagram-feed iframe {
+        }
+        .instagram-feed .instagram-posts-container {
             width: 100%;
             border-radius: 12px;
-          }
-        </style>
-      </section>
+        }
+        
+        /* Ajustes para manter consistência com o layout existente */
+        .instagram-posts-container {
+            background: var(--branco);
+            box-shadow: var(--sombra);
+        }
+        
+        .instagram-header {
+            padding: 20px 20px 10px;
+        }
+        
+        .instagram-featured-post {
+            padding: 0;
+        }
+        
+        .instagram-regular-posts {
+            gap: 0;
+            background: transparent;
+        }
+        
+        .instagram-post {
+            padding: 0;
+            border: 1px solid var(--cinza);
+        }
+    </style>
+</section>
     </div>
   </div>
 </main>
