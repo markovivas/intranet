@@ -75,4 +75,12 @@ if (!function_exists('estimated_reading_time')) {
     }
 }
 
+// Reset de CSS - Shortcode
+add_filter('do_shortcode_tag', function($output, $tag) {
+    if ($tag === 'mostra-calendario') {
+        return '<div style="all: initial !important;">' . $output . '</div>';
+    }
+    return $output;
+}, 10, 2);
+
 ?>
