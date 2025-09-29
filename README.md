@@ -80,4 +80,9 @@ https://marcovivas.com/
 
 ---
 
+## CODIGO PARA O Login
+```json
+{"login_designer":{"template":"01","bg_image":"https://intranet.local/wp-content/uploads/2025/09/maria-fumaca.jpg","bg_image_gallery":"bg_09","bg_color":"#ffffff","form_shadow":0,"form_shadow_opacity":0,"form_side_padding":40,"form_width":0,"field_bg":"#ffffff","field_border":2,"field_padding_top":6,"field_padding_bottom":6,"field_radius":3,"field_shadow":0,"field_shadow_opacity":0,"logo":"https://intranet.local/wp-content/uploads/2025/09/logo_tc.png","logo_width":160,"logo_height":160},"settings":{"login_designer_page":7,"branding_color":"#000000","branding_icon_color":"#000000"},"language_translator":{"translation":false}}
+```
+
 Para dúvidas ou sugestões, utilize o painel de administração do WordPress ou entre em contato com o desenvolvedor.
