@@ -68,6 +68,11 @@ wp-content/themes/intranet/
 - Compatível com plugins de calendário e eventos via shortcode.
 - Suporte a widgets padrão do WordPress.
 
+## Plugins de terceiros
+
+- Login Designer (https://br.wordpress.org/plugins/login-designer/)
+
+
 ## Créditos
 
 Desenvolvido por Marco Antonio Vivas
